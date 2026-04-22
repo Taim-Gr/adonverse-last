@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AdOnverse | Where Attention Becomes Achievement</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700;800&display=swap"
+        rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -62,39 +65,77 @@
         }
     </script>
     <style>
-        body { background-color: #f8fafc; color: #0f172a; overflow-x: hidden; }
-        
-        .text-gradient { 
+        body {
+            background-color: #f8fafc;
+            color: #0f172a;
+            overflow-x: hidden;
+        }
+
+        .text-gradient {
             background: linear-gradient(to right, #0096C7, #8A2BE2, #38BDF8, #0096C7);
             background-size: 200% auto;
-            -webkit-background-clip: text; 
-            -webkit-text-fill-color: transparent; 
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
             animation: textShine 4s linear infinite;
         }
 
         .bg-grid {
-            position: absolute; inset: 0; z-index: 0; background-size: 40px 40px;
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+            background-size: 40px 40px;
             background-image: linear-gradient(to right, rgba(0, 0, 0, 0.03) 1px, transparent 1px),
-                              linear-gradient(to bottom, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+                linear-gradient(to bottom, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
             mask-image: linear-gradient(to bottom, black 20%, transparent 100%);
         }
 
         .glass-nav {
-            background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
             border-bottom: 1px solid rgba(226, 232, 240, 0.8);
         }
 
         /* Cosmic Backgrounds */
-        .bg-cosmic { background: radial-gradient(ellipse at top, #240b54 0%, #0d0420 60%, #060110 100%); position: relative; }
-        .app-cosmic-bg { background: radial-gradient(ellipse at top, #2d0f57 0%, #12042b 60%, #060110 100%); position: relative; overflow: hidden; }
-        
-        @keyframes driftStars { 0% { background-position: 0px 0px; } 100% { background-position: 300px 300px; } }
-        @keyframes driftAppStars { 0% { background-position: 0px 0px; } 100% { background-position: 200px 200px; } }
-        
+        .bg-cosmic {
+            background: radial-gradient(ellipse at top, #240b54 0%, #0d0420 60%, #060110 100%);
+            position: relative;
+        }
+
+        .app-cosmic-bg {
+            background: radial-gradient(ellipse at top, #2d0f57 0%, #12042b 60%, #060110 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        @keyframes driftStars {
+            0% {
+                background-position: 0px 0px;
+            }
+
+            100% {
+                background-position: 300px 300px;
+            }
+        }
+
+        @keyframes driftAppStars {
+            0% {
+                background-position: 0px 0px;
+            }
+
+            100% {
+                background-position: 200px 200px;
+            }
+        }
+
         .bg-cosmic-stars {
-            position: absolute; inset: 0; z-index: 0; pointer-events: none; opacity: 1;
-            background-image: 
-                radial-gradient(1.5px 1.5px at 15% 25%, #FFD700 100%, transparent), 
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+            pointer-events: none;
+            opacity: 1;
+            background-image:
+                radial-gradient(1.5px 1.5px at 15% 25%, #FFD700 100%, transparent),
                 radial-gradient(1px 1px at 35% 65%, #ffffff 100%, transparent),
                 radial-gradient(2px 2px at 75% 15%, #0096C7 100%, transparent);
             background-size: 300px 300px;
@@ -102,19 +143,58 @@
         }
 
         .app-stars {
-            position: absolute; inset: 0; z-index: 0; opacity: 0.6; pointer-events: none;
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+            opacity: 0.6;
+            pointer-events: none;
             background-image: radial-gradient(1.5px 1.5px at 20px 30px, #ffffff 100%, transparent), radial-gradient(2px 2px at 150px 160px, #FFD700 100%, transparent);
             background-size: 200px 200px;
             animation: driftAppStars 20s linear infinite;
         }
 
-        .animate-float { animation: float 6s ease-in-out infinite; }
-        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
 
-        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
-        .reveal.active { opacity: 1; transform: translateY(0); }
-        .delay-100 { transition-delay: 100ms; } .delay-200 { transition-delay: 200ms; }
-        .delay-300 { transition-delay: 300ms; } .delay-400 { transition-delay: 400ms; }
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-8px);
+            }
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .delay-100 {
+            transition-delay: 100ms;
+        }
+
+        .delay-200 {
+            transition-delay: 200ms;
+        }
+
+        .delay-300 {
+            transition-delay: 300ms;
+        }
+
+        .delay-400 {
+            transition-delay: 400ms;
+        }
 
         /* Mask for Marquee */
         .marquee-mask {
@@ -123,68 +203,97 @@
         }
     </style>
 </head>
+
 <body id="body" class="antialiased selection:bg-brandPurple/20 selection:text-brandPurple relative overflow-hidden">
 
     <div id="preloader" class="fixed inset-0 z-[200] bg-cosmic flex flex-col items-center justify-center origin-top">
         <div class="bg-cosmic-stars"></div>
-        
+
         <div class="absolute inset-0 flex items-center justify-center opacity-30 pointer-events-none">
             <div class="w-[300px] h-[300px] rounded-full border border-brandPurple/40"></div>
             <div class="w-[450px] h-[450px] rounded-full border border-brandPurple/20 absolute"></div>
             <div class="w-[600px] h-[600px] rounded-full border border-brandPurple/10 absolute"></div>
         </div>
-        <img src="images/planet.png" class="relative z-10 flex flex-col items-center animate-logo-enter w-32 h-32"/>
-         <div class="text-center animate-pulse-slow">
-                <h1 class="text-4xl md:text-5xl font-display font-bold text-white tracking-tight mb-2">AdOnverse</h1>
-                <p class="text-[10px] md:text-xs font-semibold text-slate-300 tracking-widest uppercase">The Interactive Advertising Universe</p>
-            </div>
-            
-            <div class="mt-12 flex flex-col items-center">
-                <div class="w-64 md:w-80 h-1.5 bg-white/10 rounded-full overflow-hidden border border-white/5 relative">
-                    <div class="absolute top-0 left-0 h-full bg-gradient-to-r from-brandCyan to-brandPurple animate-fill-bar shadow-[0_0_15px_rgba(138,43,226,0.8)]"></div>
+        <img src="images/planet.png" class="relative z-10 flex flex-col items-center animate-logo-enter w-32 h-32" />
+        <div class="text-center animate-pulse-slow">
+            <h1 class="text-4xl md:text-5xl font-display font-bold text-white tracking-tight mb-2">AdOnverse</h1>
+            <p class="text-[10px] md:text-xs font-semibold text-slate-300 tracking-widest uppercase">The Interactive
+                Advertising Universe</p>
+        </div>
+
+        <div class="mt-12 flex flex-col items-center">
+            <div class="w-64 md:w-80 h-1.5 bg-white/10 rounded-full overflow-hidden border border-white/5 relative">
+                <div
+                    class="absolute top-0 left-0 h-full bg-gradient-to-r from-brandCyan to-brandPurple animate-fill-bar shadow-[0_0_15px_rgba(138,43,226,0.8)]">
                 </div>
-                <div class="mt-3 text-[9px] text-brandCyan/80 font-mono tracking-widest uppercase animate-pulse">System Initialization...</div>
             </div>
-       
+            <div class="mt-3 text-[9px] text-brandCyan/80 font-mono tracking-widest uppercase animate-pulse">System
+                Initialization...</div>
+        </div>
+
     </div>
-    <div id="deckModal" class="fixed inset-0 z-[300] hidden items-center justify-center bg-[#070114]/80 backdrop-blur-sm transition-all duration-300 opacity-0 px-4">
-        <div class="bg-cardDark border border-brandCyan/30 p-8 rounded-3xl shadow-[0_0_40px_rgba(0,150,199,0.2)] max-w-md w-full relative transform scale-95 transition-transform duration-300 modal-content">
-            <button onclick="closeModal('deckModal')" class="absolute top-5 right-5 text-slate-400 hover:text-white transition-colors">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+    <div id="deckModal"
+        class="fixed inset-0 z-[300] hidden items-center justify-center bg-[#070114]/80 backdrop-blur-sm transition-all duration-300 opacity-0 px-4">
+        <div
+            class="bg-cardDark border border-brandCyan/30 p-8 rounded-3xl shadow-[0_0_40px_rgba(0,150,199,0.2)] max-w-md w-full relative transform scale-95 transition-transform duration-300 modal-content">
+            <button onclick="closeModal('deckModal')"
+                class="absolute top-5 right-5 text-slate-400 hover:text-white transition-colors">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                    </path>
+                </svg>
             </button>
             <h3 class="text-2xl font-display font-bold text-white mb-2">Request Pitch Deck</h3>
             <p class="text-sm text-slate-400 mb-6">Enter your details to request the investor presentation.</p>
             <form onsubmit="sendDeckEmail(event)">
                 <div class="mb-4">
-                    <label class="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-2">Company Name</label>
-                    <input type="text" id="deckCompany" required placeholder="Your Company" class="w-full bg-[#0e051c] border border-white/10 rounded-xl px-4 py-3 text-white text-sm focus:border-brandPurple focus:outline-none focus:ring-1 focus:ring-brandPurple transition-colors placeholder-slate-600">
+                    <label class="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-2">Company
+                        Name</label>
+                    <input type="text" id="deckCompany" required placeholder="Your Company"
+                        class="w-full bg-[#0e051c] border border-white/10 rounded-xl px-4 py-3 text-white text-sm focus:border-brandPurple focus:outline-none focus:ring-1 focus:ring-brandPurple transition-colors placeholder-slate-600">
                 </div>
                 <div class="mb-6">
-                    <label class="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-2">Work Email</label>
-                    <input type="email" id="deckEmail" required placeholder="you@company.com" class="w-full bg-[#0e051c] border border-white/10 rounded-xl px-4 py-3 text-white text-sm focus:border-brandPurple focus:outline-none focus:ring-1 focus:ring-brandPurple transition-colors placeholder-slate-600">
+                    <label class="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-2">Work
+                        Email</label>
+                    <input type="email" id="deckEmail" required placeholder="you@company.com"
+                        class="w-full bg-[#0e051c] border border-white/10 rounded-xl px-4 py-3 text-white text-sm focus:border-brandPurple focus:outline-none focus:ring-1 focus:ring-brandPurple transition-colors placeholder-slate-600">
                 </div>
-                <button type="submit" class="w-full bg-brand-gradient hover:opacity-90 text-white font-bold py-3.5 rounded-full shadow-[0_0_15px_rgba(138,43,226,0.4)] transition-all">Send Request</button>
+                <button type="submit"
+                    class="w-full bg-brand-gradient hover:opacity-90 text-white font-bold py-3.5 rounded-full shadow-[0_0_15px_rgba(138,43,226,0.4)] transition-all">Send
+                    Request</button>
             </form>
         </div>
     </div>
 
-    <div id="campaignModal" class="fixed inset-0 z-[300] hidden items-center justify-center bg-[#070114]/80 backdrop-blur-sm transition-all duration-300 opacity-0 px-4">
-        <div class="bg-cardDark border border-brandCyan/30 p-8 rounded-3xl shadow-[0_0_40px_rgba(0,150,199,0.2)] max-w-md w-full relative transform scale-95 transition-transform duration-300 modal-content">
-            <button onclick="closeModal('campaignModal')" class="absolute top-5 right-5 text-slate-400 hover:text-white transition-colors">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+    <div id="campaignModal"
+        class="fixed inset-0 z-[300] hidden items-center justify-center bg-[#070114]/80 backdrop-blur-sm transition-all duration-300 opacity-0 px-4">
+        <div
+            class="bg-cardDark border border-brandCyan/30 p-8 rounded-3xl shadow-[0_0_40px_rgba(0,150,199,0.2)] max-w-md w-full relative transform scale-95 transition-transform duration-300 modal-content">
+            <button onclick="closeModal('campaignModal')"
+                class="absolute top-5 right-5 text-slate-400 hover:text-white transition-colors">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                    </path>
+                </svg>
             </button>
             <h3 class="text-2xl font-display font-bold text-white mb-2">Launch a Campaign</h3>
             <p class="text-sm text-slate-400 mb-6">Leave your details and our team will get in touch.</p>
             <form onsubmit="sendCampaignEmail(event)">
                 <div class="mb-4">
-                    <label class="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-2">Company / Brand Name</label>
-                    <input type="text" id="campaignCompany" required placeholder="Your Brand" class="w-full bg-[#0e051c] border border-white/10 rounded-xl px-4 py-3 text-white text-sm focus:border-brandCyan focus:outline-none focus:ring-1 focus:ring-brandCyan transition-colors placeholder-slate-600">
+                    <label class="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-2">Company /
+                        Brand Name</label>
+                    <input type="text" id="campaignCompany" required placeholder="Your Brand"
+                        class="w-full bg-[#0e051c] border border-white/10 rounded-xl px-4 py-3 text-white text-sm focus:border-brandCyan focus:outline-none focus:ring-1 focus:ring-brandCyan transition-colors placeholder-slate-600">
                 </div>
                 <div class="mb-6">
-                    <label class="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-2">Contact Email</label>
-                    <input type="email" id="campaignEmail" required placeholder="you@company.com" class="w-full bg-[#0e051c] border border-white/10 rounded-xl px-4 py-3 text-white text-sm focus:border-brandCyan focus:outline-none focus:ring-1 focus:ring-brandCyan transition-colors placeholder-slate-600">
+                    <label class="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-2">Contact
+                        Email</label>
+                    <input type="email" id="campaignEmail" required placeholder="you@company.com"
+                        class="w-full bg-[#0e051c] border border-white/10 rounded-xl px-4 py-3 text-white text-sm focus:border-brandCyan focus:outline-none focus:ring-1 focus:ring-brandCyan transition-colors placeholder-slate-600">
                 </div>
-                <button type="submit" class="w-full bg-brandCyan hover:bg-brandCyan/80 text-white font-bold py-3.5 rounded-full shadow-[0_0_15px_rgba(0,150,199,0.4)] transition-all">Submit Inquiry</button>
+                <button type="submit"
+                    class="w-full bg-brandCyan hover:bg-brandCyan/80 text-white font-bold py-3.5 rounded-full shadow-[0_0_15px_rgba(0,150,199,0.4)] transition-all">Submit
+                    Inquiry</button>
             </form>
         </div>
     </div>
@@ -193,8 +302,8 @@
     <nav class="fixed w-full z-50 glass-nav transition-all duration-300">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
 
-                <a href="#home" class="flex items-center gap-2.5 cursor-pointer">
-                <img src="images/planet.png" class="w-10 h-10 "/>
+            <a href="#home" class="flex items-center gap-2.5 cursor-pointer">
+                <img src="images/planet.png" class="w-10 h-10 " />
                 <!-- <div class="w-7 h-7 flex items-center justify-center rounded-sm shadow-[0_2px_10px_rgba(138,43,226,0.3)] text-gradient bg-none animate-text-shine flex items-center justify-center">
                     <svg viewBox="0 0 100 100" class="w-6 h-6 fill-current">
                         <ellipse cx="50" cy="50" rx="42" ry="12" fill="none" stroke="current" stroke-width="4" stroke-dasharray="135 100" transform="rotate(-25 50 50)" opacity="0.6"/>
@@ -204,9 +313,9 @@
                     </svg>
                 </div> -->
                 <span class="text-2xl font-display font-extrabold tracking-tight text-slate-900">AdOnverse</span>
-                </a>
-            
-            
+            </a>
+
+
             <div class="hidden md:flex gap-8 text-sm font-semibold text-slate-600">
                 <a href="#pipeline" class="hover:text-brandPurple transition">Platform</a>
                 <a href="#experience" class="hover:text-brandPurple transition">The App</a>
@@ -214,61 +323,81 @@
                 <a href="#compliance" class="hover:text-brandPurple transition">Compliance</a>
                 <a href="#team" class="hover:text-brandPurple transition">Team</a>
             </div>
-            
+
             <div class="flex gap-3">
-                <a href="#" onclick="openModal('deckModal'); return false;" class="px-5 py-2.5 text-sm font-semibold border border-slate-300 text-slate-700 hover:text-brandPurple transition rounded-full bg-white hidden sm:block">Request Pitch Deck</a>
+                <a href="#" onclick="openModal('deckModal'); return false;"
+                    class="px-5 py-2.5 text-sm font-semibold border border-slate-300 text-slate-700 hover:text-brandPurple transition rounded-full bg-white hidden sm:block">Request
+                    Pitch Deck</a>
                 <!-- <a href="#" onclick="openModal('campaignModal'); return false;" class="px-5 py-2.5 text-sm font-semibold bg-slate-900 text-white hover:bg-slate-800 transition rounded-full shadow-lg">Launch Campaign</a> -->
-<a href="https://www.adonverse.com/ar" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 text-sm font-semibold bg-slate-900 text-white hover:bg-slate-800 transition rounded-full shadow-lg">Launch Campaign</a>            </div>
+                <a href="https://www.adonverse.com/ar" target="_blank" rel="noopener noreferrer"
+                    class="px-5 py-2.5 text-sm font-semibold bg-slate-900 text-white hover:bg-slate-800 transition rounded-full shadow-lg">Launch
+                    Campaign</a>
+            </div>
         </div>
     </nav>
 
-    <section id="home" class="relative pt-[6rem] pb-32 px-6 flex flex-col items-center text-center min-h-screen justify-center bg-cosmic text-white z-20">
+    <section id="home"
+        class="relative pt-[6rem] pb-32 px-6 flex flex-col items-center text-center min-h-screen justify-center bg-cosmic text-white z-20">
         <div class="bg-cosmic-stars"></div>
         <div class="max-w-5xl mx-auto relative z-10 flex flex-col items-center w-full">
-            
-            <div class="reveal inline-block px-5 py-1.5 mb-5 rounded-full border border-brandPurple/40 bg-brandPurple/10 text-[10px] font-bold text-brandCyan shadow-[0_0_20px_rgba(138,43,226,0.3)] backdrop-blur-md tracking-widest uppercase">
+
+            <div
+                class="reveal inline-block px-5 py-1.5 mb-5 rounded-full border border-brandPurple/40 bg-brandPurple/10 text-[10px] font-bold text-brandCyan shadow-[0_0_20px_rgba(138,43,226,0.3)] backdrop-blur-md tracking-widest uppercase">
                 The Interactive Advertising Universe
             </div>
-            
-            <h1 class="reveal delay-100 text-4xl md:text-7xl lg:text-[5.5rem] font-display font-black leading-tight mb-8 tracking-tighter text-white drop-shadow-lg">
+
+            <h1
+                class="reveal delay-100 text-4xl md:text-7xl lg:text-[5.5rem] font-display font-black leading-tight mb-8 tracking-tighter text-white drop-shadow-lg">
                 Stop buying<br>impressions.<br>Buy <span class="text-gradient drop-shadow-none">participation.</span>
             </h1>
-            
-            <p class="reveal delay-200 text-lg md:text-xl text-slate-200 mb-10 max-w-3xl font-medium leading-relaxed drop-shadow mx-auto text-center">
-                AdOnverse is an interactive advertising platform where brands launch playable campaigns and players compete in skill-based experiences for sponsor-backed digital rewards.
+
+            <p
+                class="reveal delay-200 text-lg md:text-xl text-slate-200 mb-10 max-w-3xl font-medium leading-relaxed drop-shadow mx-auto text-center">
+                AdOnverse is an interactive advertising platform where brands launch playable campaigns and players
+                compete in skill-based experiences for sponsor-backed digital rewards.
             </p>
-            
+
             <div class="reveal delay-300 w-full max-w-2xl mx-auto flex justify-center mb-12">
-                <p class="text-sm text-slate-300 font-medium text-left border-l-2 border-brandCyan pl-5 py-1 max-w-lg leading-relaxed">
-                    Built for brands seeking deeper engagement, and for players who prefer skill, focus, and fair competition over interruption.
+                <p
+                    class="text-sm text-slate-300 font-medium text-left border-l-2 border-brandCyan pl-5 py-1 max-w-lg leading-relaxed">
+                    Built for brands seeking deeper engagement, and for players who prefer skill, focus, and fair
+                    competition over interruption.
                 </p>
             </div>
-            
-            <div class="reveal delay-400 flex flex-col sm:flex-row justify-center items-center gap-5 w-full sm:w-auto mb-6">
-                <a href="#" onclick="openModal('campaignModal'); return false;" class="px-8 py-3.5 rounded-full bg-btn-gradient text-white font-bold hover:shadow-[0_0_25px_rgba(138,43,226,0.6)] transition-all transform hover:-translate-y-1 w-full sm:w-auto border border-transparent">
+
+            <div
+                class="reveal delay-400 flex flex-col sm:flex-row justify-center items-center gap-5 w-full sm:w-auto mb-6">
+                <a href="#" onclick="openModal('campaignModal'); return false;"
+                    class="px-8 py-3.5 rounded-full bg-btn-gradient text-white font-bold hover:shadow-[0_0_25px_rgba(138,43,226,0.6)] transition-all transform hover:-translate-y-1 w-full sm:w-auto border border-transparent">
                     Launch a campaign
                 </a>
-                <a href="#" onclick="openModal('deckModal'); return false;" class="px-8 py-3.5 rounded-full border border-white/20 bg-transparent text-white hover:bg-white/10 transition-all font-bold backdrop-blur-md hover:-translate-y-1 w-full sm:w-auto">
+                <a href="#" onclick="openModal('deckModal'); return false;"
+                    class="px-8 py-3.5 rounded-full border border-white/20 bg-transparent text-white hover:bg-white/10 transition-all font-bold backdrop-blur-md hover:-translate-y-1 w-full sm:w-auto">
                     Request pitch deck
                 </a>
-                <a href="https://play.google.com/store/apps/details?id=com.adonverse.adonverseapp&hl=en" target="_blank" rel="noopener noreferrer" class="px-8 py-3.5 rounded-full bg-black/40 border border-brandCyan/20 text-brandCyan font-bold flex items-center justify-center gap-2 hover:border-brandCyan/50 hover:bg-brandCyan/10 transition-all shadow-[0_0_15px_rgba(0,150,199,0.1)] hover:-translate-y-1 w-full sm:w-auto">
+                <a href="https://play.google.com/store/apps/details?id=com.adonverse.adonverseapp&hl=en" target="_blank"
+                    rel="noopener noreferrer"
+                    class="px-8 py-3.5 rounded-full bg-black/40 border border-brandCyan/20 text-brandCyan font-bold flex items-center justify-center gap-2 hover:border-brandCyan/50 hover:bg-brandCyan/10 transition-all shadow-[0_0_15px_rgba(0,150,199,0.1)] hover:-translate-y-1 w-full sm:w-auto">
                     <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
-                        <path d="M5 4v16l15-8L5 4zm2 3.8l8.3 4.2L7 16.2V7.8z"/>
+                        <path d="M5 4v16l15-8L5 4zm2 3.8l8.3 4.2L7 16.2V7.8z" />
                     </svg>
                     Get it on Google Play
                 </a>
             </div>
 
             <div class="reveal delay-500 w-full max-w-4xl mx-auto border-t border-white/20 pt-6 mt-4">
-                <div class="text-[9px] md:text-[10px] font-bold text-slate-500 uppercase tracking-[0.2em] drop-shadow text-center">
-                    Skill-based rewards provided by sponsors. Points may be redeemable for digital vouchers through approved partners.
+                <div
+                    class="text-[9px] md:text-[10px] font-bold text-slate-500 uppercase tracking-[0.2em] drop-shadow text-center">
+                    Skill-based rewards provided by sponsors. Points may be redeemable for digital vouchers through
+                    approved partners.
                 </div>
             </div>
 
         </div>
-        
+
         <div class="absolute bottom-0 left-0 w-full leading-none z-20 translate-y-[1px]">
-            <svg viewBox="0 0 1440 100" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" class="w-full h-12 md:h-24 block">
+            <svg viewBox="0 0 1440 100" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+                class="w-full h-12 md:h-24 block">
                 <path d="M0 100 C480 0 960 0 1440 100 V110 H0 Z" fill="#ffffff" />
             </svg>
         </div>
@@ -281,33 +410,79 @@
                 <h2 class="text-4xl md:text-5xl font-display font-black mb-4 text-slate-900 leading-tight">
                     Traditional ads get skipped.<br><span class="text-brandPurple">AdOnverse gets played.</span>
                 </h2>
-                <p class="text-lg text-slate-600 font-medium mb-2">Most advertising is built for exposure. AdOnverse is built for participation.</p>
-                <p class="text-md text-brandCyan font-bold">Instead of placing brand messages beside the experience, AdOnverse places them inside it.</p>
+                <p class="text-lg text-slate-600 font-medium mb-2">Most advertising is built for exposure. AdOnverse is
+                    built for participation.</p>
+                <p class="text-md text-brandCyan font-bold">Instead of placing brand messages beside the experience,
+                    AdOnverse places them inside it.</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="reveal delay-100 bg-red-50/50 p-10 rounded-3xl border border-red-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-500">
+                <div
+                    class="reveal delay-100 bg-red-50/50 p-10 rounded-3xl border border-red-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-500">
                     <div class="text-slate-900 font-display font-bold text-2xl mb-6 flex items-center gap-3">
-                        <span class="w-4 h-4 rounded-full bg-red-500 shadow-[0_0_10px_rgba(239,68,68,0.5)]"></span> Traditional advertising
+                        <span class="w-4 h-4 rounded-full bg-red-500 shadow-[0_0_10px_rgba(239,68,68,0.5)]"></span>
+                        Traditional advertising
                     </div>
                     <ul class="space-y-4 text-slate-700 font-medium">
-                        <li class="flex items-center gap-3"><svg class="w-5 h-5 text-red-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"></path></svg> Passive viewing</li>
-                        <li class="flex items-center gap-3"><svg class="w-5 h-5 text-red-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"></path></svg> Easy to skip</li>
-                        <li class="flex items-center gap-3"><svg class="w-5 h-5 text-red-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"></path></svg> Weak recall</li>
-                        <li class="flex items-center gap-3"><svg class="w-5 h-5 text-red-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"></path></svg> Low interaction value</li>
-                        <li class="flex items-center gap-3"><svg class="w-5 h-5 text-red-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"></path></svg> Views without real participation</li>
+                        <li class="flex items-center gap-3"><svg class="w-5 h-5 text-red-500 flex-shrink-0" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                    d="M6 18L18 6M6 6l12 12"></path>
+                            </svg> Passive viewing</li>
+                        <li class="flex items-center gap-3"><svg class="w-5 h-5 text-red-500 flex-shrink-0" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                    d="M6 18L18 6M6 6l12 12"></path>
+                            </svg> Easy to skip</li>
+                        <li class="flex items-center gap-3"><svg class="w-5 h-5 text-red-500 flex-shrink-0" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                    d="M6 18L18 6M6 6l12 12"></path>
+                            </svg> Weak recall</li>
+                        <li class="flex items-center gap-3"><svg class="w-5 h-5 text-red-500 flex-shrink-0" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                    d="M6 18L18 6M6 6l12 12"></path>
+                            </svg> Low interaction value</li>
+                        <li class="flex items-center gap-3"><svg class="w-5 h-5 text-red-500 flex-shrink-0" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                    d="M6 18L18 6M6 6l12 12"></path>
+                            </svg> Views without real participation</li>
                     </ul>
                 </div>
-                <div class="reveal delay-200 bg-gradient-to-br from-brandPurple/10 to-brandCyan/5 p-10 rounded-3xl border border-brandPurple/20 shadow-[0_10px_30px_rgba(138,43,226,0.1)] hover:shadow-[0_20px_40px_rgba(0,150,199,0.15)] hover:-translate-y-1 transition-all duration-500 relative overflow-hidden">
+                <div
+                    class="reveal delay-200 bg-gradient-to-br from-brandPurple/10 to-brandCyan/5 p-10 rounded-3xl border border-brandPurple/20 shadow-[0_10px_30px_rgba(138,43,226,0.1)] hover:shadow-[0_20px_40px_rgba(0,150,199,0.15)] hover:-translate-y-1 transition-all duration-500 relative overflow-hidden">
                     <div class="absolute top-0 right-0 w-32 h-32 bg-brandCyan/10 blur-2xl rounded-full"></div>
-                    <div class="text-slate-900 font-display font-bold text-2xl mb-6 flex items-center gap-3 relative z-10">
+                    <div
+                        class="text-slate-900 font-display font-bold text-2xl mb-6 flex items-center gap-3 relative z-10">
                         <span class="w-4 h-4 rounded-full bg-brandCyan shadow-[0_0_15px_#0096C7]"></span> AdOnverse
                     </div>
                     <ul class="space-y-4 text-slate-800 font-bold relative z-10">
-                        <li class="flex items-center gap-3"><svg class="w-6 h-6 text-brandPurple flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg> Playable campaign moments</li>
-                        <li class="flex items-center gap-3"><svg class="w-6 h-6 text-brandPurple flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg> Opt-in participation</li>
-                        <li class="flex items-center gap-3"><svg class="w-6 h-6 text-brandPurple flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg> Stronger brand memory</li>
-                        <li class="flex items-center gap-3"><svg class="w-6 h-6 text-brandCyan flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg> Skill-based engagement</li>
-                        <li class="flex items-center gap-3"><svg class="w-6 h-6 text-brandCyan flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg> Measured through real player actions</li>
+                        <li class="flex items-center gap-3"><svg class="w-6 h-6 text-brandPurple flex-shrink-0"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg> Playable campaign moments</li>
+                        <li class="flex items-center gap-3"><svg class="w-6 h-6 text-brandPurple flex-shrink-0"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg> Opt-in participation</li>
+                        <li class="flex items-center gap-3"><svg class="w-6 h-6 text-brandPurple flex-shrink-0"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg> Stronger brand memory</li>
+                        <li class="flex items-center gap-3"><svg class="w-6 h-6 text-brandCyan flex-shrink-0"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg> Skill-based engagement</li>
+                        <li class="flex items-center gap-3"><svg class="w-6 h-6 text-brandCyan flex-shrink-0"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg> Measured through real player actions</li>
                     </ul>
                 </div>
             </div>
@@ -318,22 +493,24 @@
         <div class="bg-cosmic-stars"></div>
         <div class="max-w-4xl mx-auto px-6 relative z-10">
             <div class="reveal text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-display font-black mb-4 text-white drop-shadow-md">How AdOnverse works</h2>
-                <p class="text-lg text-slate-300 font-medium">One system connects brands, gameplay, rewards, and measurement.</p>
+                <h2 class="text-4xl md:text-5xl font-display font-black mb-4 text-white drop-shadow-md">How AdOnverse
+                    works</h2>
+                <p class="text-lg text-slate-300 font-medium">One system connects brands, gameplay, rewards, and
+                    measurement.</p>
             </div>
-            
+
             <div class="space-y-6 flex flex-col items-center">
-                <img src="images/landing/1 3104447.png"/>
+                <img src="images/landing/1 3104447.png" />
                 <!-- <div class="reveal flex items-start gap-6 bg-cardDark/80 backdrop-blur-md p-6 rounded-2xl border border-white/10 shadow-[0_10px_30px_rgba(0,0,0,0.5)] hover:-translate-y-1 transition duration-300">
                     <div class="w-12 h-12 flex-shrink-0 rounded-xl bg-brandPurple/20 flex items-center justify-center font-bold text-brandCyan text-xl border border-brandPurple/30 shadow-inner">1</div>
                     <div><h3 class="font-bold text-lg text-white mb-1">Create the campaign</h3><p class="text-slate-400 text-sm leading-relaxed">Brands choose creative assets, CTA, target region, reward type, and budget.</p></div>
                 </div> -->
-               <img src="images/landing/2 75.png"/>
+                <img src="images/landing/2 75.png" />
                 <!-- <div class="reveal delay-100 flex items-start gap-6 bg-cardDark/80 backdrop-blur-md p-6 rounded-2xl border border-white/10 shadow-[0_10px_30px_rgba(0,0,0,0.5)] hover:-translate-y-1 transition duration-300">
                     <div class="w-12 h-12 flex-shrink-0 rounded-xl bg-brandPurple/20 flex items-center justify-center font-bold text-brandCyan text-xl border border-brandPurple/30 shadow-inner">2</div>
                     <div><h3 class="font-bold text-lg text-white mb-1">Launch inside gameplay</h3><p class="text-slate-400 text-sm leading-relaxed">The campaign is placed inside a live skill-based game experience.</p></div>
                 </div> -->
-                <img src="images/landing/3 5392997.png"/>
+                <img src="images/landing/3 5392997.png" />
                 <!-- <div class="reveal delay-200 flex items-start gap-6 bg-cardDark/80 backdrop-blur-md p-6 rounded-2xl border border-white/10 shadow-[0_10px_30px_rgba(0,0,0,0.5)] hover:-translate-y-1 transition duration-300">
                     <div class="w-12 h-12 flex-shrink-0 rounded-xl bg-brandPurple/20 flex items-center justify-center font-bold text-brandCyan text-xl border border-brandPurple/30 shadow-inner">3</div>
                     <div><h3 class="font-bold text-lg text-white mb-1">Players compete and engage</h3><p class="text-slate-400 text-sm leading-relaxed">Users interact with the campaign while playing short competitive rounds.</p></div>
@@ -381,8 +558,8 @@
                     </div>
                 </div>
             </div> -->
-<img src="images/landing/4 16708418.png"/>
-            <!-- <div class="reveal delay-100 order-1 lg:order-2">
+                <img src="images/landing/4 16708418.png" />
+                <!-- <div class="reveal delay-100 order-1 lg:order-2">
                 <h2 class="text-4xl md:text-5xl font-display font-black mb-6 tracking-tight text-slate-900 leading-tight">Built for sponsors, not just players</h2>
                 <p class="text-lg text-slate-600 mb-8 font-medium leading-relaxed">AdOnverse gives sponsors one place to build campaigns, launch them inside gameplay, and measure real participation.</p>
                 <ul class="space-y-3 text-sm text-slate-800 font-bold mb-8">
@@ -395,50 +572,62 @@
                 </ul>
                 <div class="inline-block px-5 py-3 border-l-4 border-brandCyan bg-brandCyan/5 font-semibold text-brandCyan text-sm rounded-r-lg">This is not passive ad placement. It is a playable campaign system.</div>
             </div> -->
-            <img src="images/landing/gemini-watermark-removed 1 1.png"/>
-        </div>
+                <img src="images/landing/gemini-watermark-removed 1 1.png" />
+            </div>
     </section>
 
-    <section id="experience" class="relative pt-24 pb-10 z-20 bg-cosmic overflow-hidden border-b border-white/5 shadow-inner">
+    <section id="experience"
+        class="relative pt-24 pb-10 z-20 bg-cosmic overflow-hidden border-b border-white/5 shadow-inner">
         <div class="bg-cosmic-stars"></div>
         <div class="max-w-7xl mx-auto px-6 text-center mb-16 relative z-10">
-            <div class="reveal inline-block px-4 py-1.5 mb-4 rounded-full bg-brandCyan/20 text-xs font-bold uppercase tracking-widest text-brandCyan border border-brandCyan/40 shadow-[0_0_15px_rgba(0,150,199,0.3)]">
+            <div
+                class="reveal inline-block px-4 py-1.5 mb-4 rounded-full bg-brandCyan/20 text-xs font-bold uppercase tracking-widest text-brandCyan border border-brandCyan/40 shadow-[0_0_15px_rgba(0,150,199,0.3)]">
                 The App Experience
             </div>
-            <h2 class="reveal delay-100 text-4xl md:text-5xl font-display font-black mb-6 text-white drop-shadow-md">The Game is The Ad</h2>
-            <p class="reveal delay-200 text-lg text-slate-300 max-w-3xl mx-auto font-medium">Wake Panda is the first live playable experience built on the AdOnverse platform.<br>It combines short competitive rounds, shared momentum, and sponsor visibility at high-attention moments.</p>
+            <h2 class="reveal delay-100 text-4xl md:text-5xl font-display font-black mb-6 text-white drop-shadow-md">The
+                Game is The Ad</h2>
+            <p class="reveal delay-200 text-lg text-slate-300 max-w-3xl mx-auto font-medium">Wake Panda is the first
+                live playable experience built on the AdOnverse platform.<br>It combines short competitive rounds,
+                shared momentum, and sponsor visibility at high-attention moments.</p>
         </div>
 
         <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 relative z-10 mb-20">
             <div class="reveal flex flex-col items-center">
-                <img src="images/adonverse1.png" alt="Game 1" class="w-[280px] h-[520px]  rounded-[2.5rem]  object-contain  relative overflow-hidden"/>
-            
+                <img src="images/adonverse1.png" alt="Game 1"
+                    class="w-[280px] h-[520px]  rounded-[2.5rem]  object-contain  relative overflow-hidden" />
+
                 <h3 class="mt-4 text-lg font-bold text-white text-center">1. Lobby Screen</h3>
                 <p class="text-sm text-slate-400 text-center mt-2 px-4">Sponsors appear before gameplay begins.</p>
             </div>
-<!-- Designed For player -->
+            <!-- Designed For player -->
             <div class="reveal delay-100 flex flex-col items-center transform lg:-translate-y-8">
-                               <img src="images/lastghostlyad.png" alt="Game 1" class="w-[280px] h-[520px]  rounded-[2.5rem]  object-contain  relative overflow-hidden"/>
+                <img src="images/lastghostlyad.png" alt="Game 1"
+                    class="w-[280px] h-[520px]  rounded-[2.5rem]  object-contain  relative overflow-hidden" />
 
                 <h3 class="mt-4 text-lg font-bold text-white text-center">2. Sponsor Memory</h3>
-                <p class="text-sm text-slate-400 text-center mt-2 px-4">The game is the ad. Players study the sponsor message to earn points.</p>
+                <p class="text-sm text-slate-400 text-center mt-2 px-4">The game is the ad. Players study the sponsor
+                    message to earn points.</p>
             </div>
 
             <div class="reveal delay-200 flex flex-col items-center  ">
                 <div class="w-[280px] h-[520px]  rounded-[2.5rem]  object-contain  relative ">
-                     <img src="images/screen1.png" alt="Game 1" class="w-full h-full object-contain"/>
-                     <img src="images/GlobalBar.png" alt="Game 1" class="w-[360px] h-full object-contain absolute z-10 top-0 left-1/2 -translate-x-1/2"/>
+                    <img src="images/screen1.png" alt="Game 1" class="w-full h-full object-contain" />
+                    <img src="images/GlobalBar.png" alt="Game 1"
+                        class="w-[360px] h-full object-contain absolute z-10 top-0 left-1/2 -translate-x-1/2" />
                 </div>
-                              
+
                 <h3 class="mt-4 text-lg font-bold text-white text-center">3. Global Progress</h3>
-                <p class="text-sm text-slate-400 text-center mt-2 px-4">Fast rounds. Players compete while contributing to a shared progress bar.</p>
+                <p class="text-sm text-slate-400 text-center mt-2 px-4">Fast rounds. Players compete while contributing
+                    to a shared progress bar.</p>
             </div>
 
             <div class="reveal delay-300 flex flex-col items-center transform lg:-translate-y-8">
-                <img src="images/visar.png" alt="Game 1" class="w-[280px] h-[520px]  rounded-[2.5rem]  object-contain  relative overflow-hidden"/>
+                <img src="images/visar.png" alt="Game 1"
+                    class="w-[280px] h-[520px]  rounded-[2.5rem]  object-contain  relative overflow-hidden" />
 
                 <h3 class="mt-4 text-lg font-bold text-white text-center">4. Redeem Rewards</h3>
-                <p class="text-sm text-slate-400 text-center mt-2 px-4">Eligible outcomes connect to sponsor-backed digital rewards.</p>
+                <p class="text-sm text-slate-400 text-center mt-2 px-4">Eligible outcomes connect to sponsor-backed
+                    digital rewards.</p>
             </div>
         </div>
     </section>
@@ -447,19 +636,26 @@
         <div class="bg-grid"></div>
         <div class="max-w-7xl mx-auto px-6 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center ">
             <div class="reveal">
-                <div class="inline-block px-3 py-1 mb-4 rounded-md bg-brandPurple/10 text-[10px] font-bold uppercase tracking-widest text-brandPurple">
+                <div
+                    class="inline-block px-3 py-1 mb-4 rounded-md bg-brandPurple/10 text-[10px] font-bold uppercase tracking-widest text-brandPurple">
                     Active Recall
                 </div>
-                <h2 class="text-4xl font-display font-black mb-6 text-slate-900 leading-tight">Players don't just see your ad. They study it.</h2>
-                <p class="text-lg text-slate-600 font-medium mb-6 leading-relaxed">Passive ads are forgotten the moment they are skipped. In AdOnverse, we turn your brand's messaging into core gameplay mechanics.</p>
-                <p class="text-md text-slate-500 mb-8 leading-relaxed">Through the "Sponsor Memory" feature, players are quizzed on details of your campaign. To earn crucial Bonus Points, they must actively read, understand, and recall your brand's value proposition.</p>
-                
-                <div class="bg-slate-50 p-6 rounded-xl border-l-4 border-brandPurple shadow-sm italic text-slate-700 font-medium">
-                    "This shifts the dynamic entirely. Users are no longer trying to ignore the sponsor; they are actively seeking out the sponsor's information to win the round."
+                <h2 class="text-4xl font-display font-black mb-6 text-slate-900 leading-tight">Players don't just see
+                    your ad. They study it.</h2>
+                <p class="text-lg text-slate-600 font-medium mb-6 leading-relaxed">Passive ads are forgotten the moment
+                    they are skipped. In AdOnverse, we turn your brand's messaging into core gameplay mechanics.</p>
+                <p class="text-md text-slate-500 mb-8 leading-relaxed">Through the "Sponsor Memory" feature, players are
+                    quizzed on details of your campaign. To earn crucial Bonus Points, they must actively read,
+                    understand, and recall your brand's value proposition.</p>
+
+                <div
+                    class="bg-slate-50 p-6 rounded-xl border-l-4 border-brandPurple shadow-sm italic text-slate-700 font-medium">
+                    "This shifts the dynamic entirely. Users are no longer trying to ignore the sponsor; they are
+                    actively seeking out the sponsor's information to win the round."
                 </div>
             </div>
             <div class="flex justify-center">
-            <img src="images/lastQuestions.png" />
+                <img src="images/lastQuestions.png" />
             </div>
         </div>
     </section>
@@ -470,53 +666,85 @@
             <h2 class="reveal text-4xl font-display font-black mb-12 drop-shadow-md">Available Games</h2>
             <!-- questio -->
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                <div class="reveal delay-200 bg-[#1a0f30]/80 backdrop-blur-md rounded-2xl border border-white/10 px-4 py-2 shadow-lg hover:-translate-y-2 transition-transform h-full flex flex-col justify-between items-center">
+                <div
+                    class="reveal delay-200 bg-[#1a0f30]/80 backdrop-blur-md rounded-2xl border border-white/10 px-4 py-2 shadow-lg hover:-translate-y-2 transition-transform h-full flex flex-col justify-between items-center">
                     <h3 class="font-bold text-2xl mb-3">Wake Panda</h3>
-                    <img src="images/wakePandaAvatar.png" class="w-[90%] aspect-square object-contain rounded-xl "/>
-                    <p class="text-xs py-1">Tap 'W' to wake the panda and score points, but avoid 'Z' to keep your streak alive. Pure reflex and speed!</p>
+                    <img src="images/wakePandaAvatar.png" class="w-[90%] aspect-square object-contain rounded-xl " />
+                    <p class="text-xs py-1">Tap 'W' to wake the panda and score points, but avoid 'Z' to keep your
+                        streak alive. Pure reflex and speed!</p>
                 </div>
-              
-                <div class="reveal delay-200 bg-[#1a0f30]/80 backdrop-blur-md rounded-2xl border border-white/10 px-4 py-2 shadow-lg hover:-translate-y-2 transition-transform h-full flex flex-col justify-between items-center">
+
+                <div
+                    class="reveal delay-200 bg-[#1a0f30]/80 backdrop-blur-md rounded-2xl border border-white/10 px-4 py-2 shadow-lg hover:-translate-y-2 transition-transform h-full flex flex-col justify-between items-center">
                     <h3 class="font-bold text-2xl mb-3">Pixel Market</h3>
-                    <img src="images/pixelMarket.png" class="w-[90%] aspect-square object-contain rounded-xl "/>
-                    <p class="text-xs py-1">Memorize and match the dynamic color patterns before the timer runs out. A test of visual memory and ultimate focus.</p>
+                    <img src="images/pixelMarket.png" class="w-[90%] aspect-square object-contain rounded-xl " />
+                    <p class="text-xs py-1">Memorize and match the dynamic color patterns before the timer runs out. A
+                        test of visual memory and ultimate focus.</p>
                 </div>
-                <div class="reveal delay-200 bg-[#1a0f30]/80 backdrop-blur-md rounded-2xl border border-white/10 px-4 py-2 shadow-lg hover:-translate-y-2 transition-transform h-full flex flex-col justify-between items-center">
+                <div
+                    class="reveal delay-200 bg-[#1a0f30]/80 backdrop-blur-md rounded-2xl border border-white/10 px-4 py-2 shadow-lg hover:-translate-y-2 transition-transform h-full flex flex-col justify-between items-center">
                     <h3 class="font-bold text-2xl mb-3">Pizza Clicker</h3>
-                    <img src="images/pizzaGame.png" class="w-[90%] aspect-square object-contain rounded-xl "/>
-                    <p class="text-xs py-1">Tap the right ingredients in the exact sequence at lightning speed. Perfect timing maximizes your sponsored points.</p>
+                    <img src="images/pizzaGame.png" class="w-[90%] aspect-square object-contain rounded-xl " />
+                    <p class="text-xs py-1">Tap the right ingredients in the exact sequence at lightning speed. Perfect
+                        timing maximizes your sponsored points.</p>
                 </div>
-                <div class="reveal delay-200 bg-[#1a0f30]/80 backdrop-blur-md rounded-2xl border border-white/10 px-4 py-2 shadow-lg hover:-translate-y-2 transition-transform h-full flex flex-col justify-between items-center">
+                <div
+                    class="reveal delay-200 bg-[#1a0f30]/80 backdrop-blur-md rounded-2xl border border-white/10 px-4 py-2 shadow-lg hover:-translate-y-2 transition-transform h-full flex flex-col justify-between items-center">
                     <h3 class="font-bold text-2xl mb-3">Trade Sphere</h3>
-                    <img src="images/square.png" class="w-[90%] aspect-square object-contain rounded-xl "/>
-                    <p class="text-xs py-1">Swiftly sort falling resources into their correct categories. Quick decision-making secures your top leaderboard rank.</p>
+                    <img src="images/square.png" class="w-[90%] aspect-square object-contain rounded-xl " />
+                    <p class="text-xs py-1">Swiftly sort falling resources into their correct categories. Quick
+                        decision-making secures your top leaderboard rank.</p>
                 </div>
-                
-               
+
+
             </div>
         </div>
     </section>
 
     <section id="analytics" class="py-24 relative z-10 bg-white shadow-xl">
         <div class="bg-grid"></div>
-        <div class="max-w-7xl mx-auto px-6 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center pt-8 leading-tight">
+        <div
+            class="max-w-7xl mx-auto px-6 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center pt-8 leading-tight">
             <div class="reveal">
-                <h2 class="text-4xl md:text-5xl font-display font-black mb-6 text-slate-900 tracking-tight leading-tight">Engagement you can actually measure</h2>
-                <p class="text-lg text-slate-600 mb-8 font-medium">AdOnverse measures more than views and clicks. It tracks campaign participation through real user activity inside gameplay.</p>
+                <h2
+                    class="text-4xl md:text-5xl font-display font-black mb-6 text-slate-900 tracking-tight leading-tight">
+                    Engagement you can actually measure</h2>
+                <p class="text-lg text-slate-600 mb-8 font-medium">AdOnverse measures more than views and clicks. It
+                    tracks campaign participation through real user activity inside gameplay.</p>
                 <ul class="space-y-4 text-sm font-bold text-slate-800 mb-8">
-                    <li class="flex items-center gap-3"><div class="w-2.5 h-2.5 bg-brandCyan rounded-full shadow-[0_0_8px_#0096C7]"></div> Campaign entry</li>
-                    <li class="flex items-center gap-3"><div class="w-2.5 h-2.5 bg-brandCyan rounded-full shadow-[0_0_8px_#0096C7]"></div> Interaction completion</li>
-                    <li class="flex items-center gap-3"><div class="w-2.5 h-2.5 bg-brandCyan rounded-full shadow-[0_0_8px_#0096C7]"></div> Time spent in branded moments</li>
-                    <li class="flex items-center gap-3"><div class="w-2.5 h-2.5 bg-brandCyan rounded-full shadow-[0_0_8px_#0096C7]"></div> Repeat participation</li>
-                    <li class="flex items-center gap-3"><div class="w-2.5 h-2.5 bg-brandCyan rounded-full shadow-[0_0_8px_#0096C7]"></div> In-game response behavior</li>
-                    <li class="flex items-center gap-3"><div class="w-2.5 h-2.5 bg-brandCyan rounded-full shadow-[0_0_8px_#0096C7]"></div> Post-round engagement signals</li>
+                    <li class="flex items-center gap-3">
+                        <div class="w-2.5 h-2.5 bg-brandCyan rounded-full shadow-[0_0_8px_#0096C7]"></div> Campaign
+                        entry
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <div class="w-2.5 h-2.5 bg-brandCyan rounded-full shadow-[0_0_8px_#0096C7]"></div> Interaction
+                        completion
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <div class="w-2.5 h-2.5 bg-brandCyan rounded-full shadow-[0_0_8px_#0096C7]"></div> Time spent in
+                        branded moments
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <div class="w-2.5 h-2.5 bg-brandCyan rounded-full shadow-[0_0_8px_#0096C7]"></div> Repeat
+                        participation
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <div class="w-2.5 h-2.5 bg-brandCyan rounded-full shadow-[0_0_8px_#0096C7]"></div> In-game
+                        response behavior
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <div class="w-2.5 h-2.5 bg-brandCyan rounded-full shadow-[0_0_8px_#0096C7]"></div> Post-round
+                        engagement signals
+                    </li>
                 </ul>
-                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 border-l-4 border-l-brandPurple shadow-sm inline-block hover:-translate-y-1 transition-transform">
-                    <h3 class="text-lg md:text-xl font-display font-bold text-slate-800 italic">"CTR is a signal. <br><span class="text-brandPurple">Engagement quality is the product.</span>"</h3>
+                <div
+                    class="bg-slate-50 p-6 rounded-2xl border border-slate-200 border-l-4 border-l-brandPurple shadow-sm inline-block hover:-translate-y-1 transition-transform">
+                    <h3 class="text-lg md:text-xl font-display font-bold text-slate-800 italic">"CTR is a signal.
+                        <br><span class="text-brandPurple">Engagement quality is the product.</span>"</h3>
                 </div>
             </div>
             <div class="reveal delay-200 relative">
-                <img src="images/Campign.png"/>
+                <img src="images/Campign.png" />
                 <!-- <div class="bg-white rounded-3xl p-6 border border-slate-200 shadow-[0_20px_50px_-10px_rgba(15,23,42,0.1)] hover:-translate-y-2 transition-transform duration-500 relative z-10">
                     <div class="flex justify-between items-center mb-6">
                         <span class="text-xs font-bold text-slate-400 uppercase tracking-widest">Campaign Performance</span>
@@ -538,59 +766,98 @@
                         <div class="w-full bg-brandCyan/20 rounded-t h-[30%]"></div><div class="w-full bg-brandCyan/40 rounded-t h-[50%]"></div><div class="w-full bg-brandCyan/60 rounded-t h-[65%]"></div><div class="w-full bg-brandCyan/80 rounded-t h-[80%]"></div><div class="w-full bg-brand-gradient shadow-[0_0_15px_rgba(0,150,199,0.4)] rounded-t h-[100%] animate-pulse"></div><div class="w-full bg-brandCyan/50 rounded-t h-[70%]"></div><div class="w-full bg-brandCyan/30 rounded-t h-[40%]"></div>
                     </div>
                 </div> -->
-                <div class="absolute -right-4 -bottom-4 w-32 h-32 bg-brandPurple/20 rounded-full blur-2xl z-0 pointer-events-none"></div>
+                <div
+                    class="absolute -right-4 -bottom-4 w-32 h-32 bg-brandPurple/20 rounded-full blur-2xl z-0 pointer-events-none">
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="compliance" class="relative pt-24 pb-32 z-20 bg-cosmic overflow-hidden shadow-2xl border-b border-white/5">
+    <section id="compliance"
+        class="relative pt-24 pb-32 z-20 bg-cosmic overflow-hidden shadow-2xl border-b border-white/5">
         <div class="bg-cosmic-stars"></div>
         <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
-            <div class="reveal w-16 h-16 bg-white/5 rounded-2xl shadow-[0_0_20px_rgba(0,150,199,0.2)] border border-brandCyan/20 flex items-center justify-center mx-auto mb-6">
-                <svg class="w-8 h-8 text-brandCyan drop-shadow-[0_0_8px_rgba(0,150,199,0.8)]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+            <div
+                class="reveal w-16 h-16 bg-white/5 rounded-2xl shadow-[0_0_20px_rgba(0,150,199,0.2)] border border-brandCyan/20 flex items-center justify-center mx-auto mb-6">
+                <svg class="w-8 h-8 text-brandCyan drop-shadow-[0_0_8px_rgba(0,150,199,0.8)]" fill="none"
+                    stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
+                    </path>
+                </svg>
             </div>
-            <h2 class="reveal delay-100 text-4xl font-display font-black mb-6 text-white drop-shadow-md leading-tight">100% skill-based. Designed for brand safety.</h2>
-            <p class="reveal delay-200 text-lg text-slate-300 mb-10 font-medium leading-relaxed max-w-3xl mx-auto">AdOnverse is designed for brands that require clarity, structure, and a clean participation model. It operates as an interactive advertising platform, not as a gambling or financial application. Players earn points through skill-based play, and eligible outcomes may be redeemed through approved digital reward flows.</p>
-            
-            <div class="reveal delay-300 grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm font-bold text-slate-200 text-left max-w-3xl mx-auto">
-                <div class="flex items-start gap-3 bg-cardDark/80 p-5 rounded-xl border border-white/5 backdrop-blur-md hover:bg-cardDark transition-colors shadow-lg h-full">
-                    <svg class="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5 drop-shadow-[0_0_5px_rgba(34,197,94,0.5)]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg> Built around skill-based participation
+            <h2 class="reveal delay-100 text-4xl font-display font-black mb-6 text-white drop-shadow-md leading-tight">
+                100% skill-based. Designed for brand safety.</h2>
+            <p class="reveal delay-200 text-lg text-slate-300 mb-10 font-medium leading-relaxed max-w-3xl mx-auto">
+                AdOnverse is designed for brands that require clarity, structure, and a clean participation model. It
+                operates as an interactive advertising platform, not as a gambling or financial application. Players
+                earn points through skill-based play, and eligible outcomes may be redeemed through approved digital
+                reward flows.</p>
+
+            <div
+                class="reveal delay-300 grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm font-bold text-slate-200 text-left max-w-3xl mx-auto">
+                <div
+                    class="flex items-start gap-3 bg-cardDark/80 p-5 rounded-xl border border-white/5 backdrop-blur-md hover:bg-cardDark transition-colors shadow-lg h-full">
+                    <svg class="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5 drop-shadow-[0_0_5px_rgba(34,197,94,0.5)]"
+                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+                    </svg> Built around skill-based participation
                 </div>
-                <div class="flex items-start gap-3 bg-cardDark/80 p-5 rounded-xl border border-white/5 backdrop-blur-md hover:bg-cardDark transition-colors shadow-lg h-full">
-                    <svg class="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5 drop-shadow-[0_0_5px_rgba(34,197,94,0.5)]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg> No gambling or luck-based mechanics
+                <div
+                    class="flex items-start gap-3 bg-cardDark/80 p-5 rounded-xl border border-white/5 backdrop-blur-md hover:bg-cardDark transition-colors shadow-lg h-full">
+                    <svg class="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5 drop-shadow-[0_0_5px_rgba(34,197,94,0.5)]"
+                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+                    </svg> No gambling or luck-based mechanics
                 </div>
-                <div class="flex items-start gap-3 bg-cardDark/80 p-5 rounded-xl border border-white/5 backdrop-blur-md hover:bg-cardDark transition-colors shadow-lg h-full">
-                    <svg class="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5 drop-shadow-[0_0_5px_rgba(34,197,94,0.5)]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg> Structured sponsor-funded reward model
+                <div
+                    class="flex items-start gap-3 bg-cardDark/80 p-5 rounded-xl border border-white/5 backdrop-blur-md hover:bg-cardDark transition-colors shadow-lg h-full">
+                    <svg class="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5 drop-shadow-[0_0_5px_rgba(34,197,94,0.5)]"
+                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+                    </svg> Structured sponsor-funded reward model
                 </div>
-                <div class="flex items-start gap-3 bg-cardDark/80 p-5 rounded-xl border border-white/5 backdrop-blur-md hover:bg-cardDark transition-colors shadow-lg h-full">
-                    <svg class="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5 drop-shadow-[0_0_5px_rgba(34,197,94,0.5)]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg> Designed with platform policy awareness in mind
+                <div
+                    class="flex items-start gap-3 bg-cardDark/80 p-5 rounded-xl border border-white/5 backdrop-blur-md hover:bg-cardDark transition-colors shadow-lg h-full">
+                    <svg class="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5 drop-shadow-[0_0_5px_rgba(34,197,94,0.5)]"
+                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+                    </svg> Designed with platform policy awareness in mind
                 </div>
             </div>
         </div>
     </section>
 
-     <section class="py-24 relative z-10 bg-white">
+    <section class="py-24 relative z-10 bg-white">
         <div class="bg-grid"></div>
         <div class="max-w-7xl mx-auto px-6 relative z-10 text-center leading-tight">
-            <h2 class="reveal text-4xl font-display font-extrabold mb-4 text-slate-900 leading-tight">Designed for players who prefer skill</h2>
-            <p class="reveal delay-100 text-lg text-slate-600 mb-12 max-w-4xl mx-auto font-medium">Players come to compete, not to watch ads. The experience relies on deep game loops and progression.</p>
+            <h2 class="reveal text-4xl font-display font-extrabold mb-4 text-slate-900 leading-tight">Designed for
+                players who prefer skill</h2>
+            <p class="reveal delay-100 text-lg text-slate-600 mb-12 max-w-4xl mx-auto font-medium">Players come to
+                compete, not to watch ads. The experience relies on deep game loops and progression.</p>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-                <div class="reveal bg-slate-50 rounded-3xl p-6 border border-slate-200 flex flex-col h-full hover:-translate-y-1 transition-all text-left leading-snug">
-                    <img src="images/tapPanda.png"/>
+                <div
+                    class="reveal bg-slate-50 rounded-3xl p-6 border border-slate-200 flex flex-col h-full hover:-translate-y-1 transition-all text-left leading-snug">
+                    <img src="images/tapPanda.png" />
                     <h3 class="font-bold text-lg text-slate-900 mb-2">Fast-Paced Core Gameplay</h3>
-                    <p class="text-sm text-slate-600 leading-relaxed">No forced passive watching. High-focus sessions requiring sharp reactions.</p>
+                    <p class="text-sm text-slate-600 leading-relaxed">No forced passive watching. High-focus sessions
+                        requiring sharp reactions.</p>
                 </div>
                 <!-- 4.png -->
-                <div class="reveal delay-100 bg-[#0f172a] rounded-3xl p-6 md:p-8 border border-slate-800 shadow-[0_30px_60px_rgba(15,23,42,0.3)] hover:-translate-y-2 transition-transform duration-500 relative overflow-hidden flex flex-col h-full md:scale-105 z-10 leading-snug text-center">
-                    <img src="images/geminiLast.png" class="w-full mb-2"/>
+                <div
+                    class="reveal delay-100 bg-[#0f172a] rounded-3xl p-6 md:p-8 border border-slate-800 shadow-[0_30px_60px_rgba(15,23,42,0.3)] hover:-translate-y-2 transition-transform duration-500 relative overflow-hidden flex flex-col h-full md:scale-105 z-10 leading-snug text-center">
+                    <img src="images/geminiLast.png" class="w-full mb-2" />
                     <h3 class="font-bold text-xl text-white mb-2 relative z-10">Strategic Risk & Reward</h3>
-                    <p class="text-sm text-slate-300 relative z-10 leading-relaxed">Attention is guaranteed. Players must engage with sponsor features to "secure" their balance.</p>
+                    <p class="text-sm text-slate-300 relative z-10 leading-relaxed">Attention is guaranteed. Players
+                        must engage with sponsor features to "secure" their balance.</p>
                 </div>
-                <div class="reveal delay-200 bg-slate-50 rounded-3xl p-6 border border-slate-200 flex flex-col h-full hover:-translate-y-1 transition-all text-left leading-snug">
-                                        <img src="images/lastMileStone.png" class="w-full"/>
+                <div
+                    class="reveal delay-200 bg-slate-40 rounded-3xl p-6 border border-slate-200 flex flex-col h-full hover:-translate-y-1 transition-all text-left leading-snug">
+                    <img src="images/lastMileStone.png" class="w-full" />
 
                     <h3 class="font-bold text-lg text-slate-900 mb-2">Milestone Progression</h3>
-                    <p class="text-sm text-slate-600 leading-relaxed">Structured loops ensuring players stay engaged for longer driving deep retention.</p>
+                    <p class="text-sm text-slate-600 leading-relaxed">Structured loops ensuring players stay engaged for
+                        longer driving deep retention.</p>
                 </div>
             </div>
         </div>
@@ -600,59 +867,100 @@
         <div class="bg-cosmic-stars"></div>
         <div class="max-w-7xl mx-auto px-6 relative z-10">
             <div class="reveal text-center mb-16 max-w-4xl mx-auto">
-                <h2 class="text-4xl font-display font-extrabold mb-6 text-white drop-shadow-md leading-tight">Backed by real game and product experience</h2>
-                <p class="text-lg text-slate-300 font-medium mb-4 max-w-3xl mx-auto">Before AdOnverse, members of the founding team built and operated game products across multiple markets and platforms.</p>
-                <p class="text-md text-slate-400 font-medium max-w-2xl mx-auto">That background gives the company practical experience in building engaging products, operating live systems, and designing scalable player experiences.</p>
+                <h2 class="text-4xl font-display font-extrabold mb-6 text-white drop-shadow-md leading-tight">Backed by
+                    real game and product experience</h2>
+                <p class="text-lg text-slate-300 font-medium mb-4 max-w-3xl mx-auto">Before AdOnverse, members of the
+                    founding team built and operated game products across multiple markets and platforms.</p>
+                <p class="text-md text-slate-400 font-medium max-w-2xl mx-auto">That background gives the company
+                    practical experience in building engaging products, operating live systems, and designing scalable
+                    player experiences.</p>
             </div>
-            
+
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-    <div class="relative overflow-hidden group reveal delay-100 bg-cardDark rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.6)] p-8 flex flex-col items-center border border-white/5 hover:-translate-y-2 hover:border-brandCyan/30 transition-all duration-500 h-full">
-        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-1 bg-gradient-to-r from-brandCyan to-brandPurple rounded-b-full opacity-80 group-hover:w-full group-hover:h-1.5 transition-all duration-500"></div>
-        
-        <div class="relative w-40 h-40 mb-6 flex items-center justify-center flex-shrink-0">
-            <img src="images/Mohamed.png" class="absolute inset-0 w-full h-full object-contain" alt="Mohammed Wael Dayoub">
-        </div>
-        <h3 class="font-bold text-lg text-white mb-2 text-center flex-grow flex items-center leading-tight pt-1 pb-1">Mohammed Wael<br>Dayoub</h3>
-        <div class="bg-[#0b1633] border border-brandCyan/30 text-brandCyan text-[10px] font-bold px-4 py-1.5 rounded-full uppercase tracking-wider mb-6 whitespace-nowrap shadow-[0_0_15px_rgba(0,150,199,0.3)] flex-shrink-0">Founder & CEO</div>
-        <p class="text-sm text-slate-400 text-center leading-relaxed">15+ years in game development, publishing, growth strategy, and interactive systems.</p>
-    </div>
+                <div
+                    class="relative overflow-hidden group reveal delay-100 bg-cardDark rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.6)] p-8 flex flex-col items-center border border-white/5 hover:-translate-y-2 hover:border-brandCyan/30 transition-all duration-500 h-full">
+                    <div
+                        class="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-1 bg-gradient-to-r from-brandCyan to-brandPurple rounded-b-full opacity-80 group-hover:w-full group-hover:h-1.5 transition-all duration-500">
+                    </div>
 
-    <div class="relative overflow-hidden group reveal delay-200 bg-cardDark rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.6)] p-8 flex flex-col items-center border border-white/5 hover:-translate-y-2 hover:border-brandCyan/30 transition-all duration-500 h-full">
-        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-1 bg-gradient-to-r from-brandCyan to-brandPurple rounded-b-full opacity-80 group-hover:w-full group-hover:h-1.5 transition-all duration-500"></div>
+                    <div class="relative w-40 h-40 mb-6 flex items-center justify-center flex-shrink-0">
+                        <img src="images/Mohamed.png" class="absolute inset-0 w-full h-full object-contain"
+                            alt="Mohammed Wael Dayoub">
+                    </div>
+                    <h3
+                        class="font-bold text-lg text-white mb-2 text-center flex-grow flex items-center leading-tight pt-1 pb-1">
+                        Mohammed Wael<br>Dayoub</h3>
+                    <div
+                        class="bg-[#0b1633] border border-brandCyan/30 text-brandCyan text-[10px] font-bold px-4 py-1.5 rounded-full uppercase tracking-wider mb-6 whitespace-nowrap shadow-[0_0_15px_rgba(0,150,199,0.3)] flex-shrink-0">
+                        Founder & CEO</div>
+                    <p class="text-sm text-slate-400 text-center leading-relaxed">15+ years in game development,
+                        publishing, growth strategy, and interactive systems.</p>
+                </div>
 
-        <div class="relative w-40 h-40 mb-6 flex items-center justify-center flex-shrink-0">
-            <img src="images/nedim.png" class="absolute inset-0 w-full h-full object-contain" alt="Nedim Turk">
-        </div>
-        <h3 class="font-bold text-lg text-white mb-2 text-center pt-3 flex-grow flex items-center leading-tight pb-1">Nedim Turk</h3>
-        <div class="bg-[#0b1633] border border-brandCyan/30 text-brandCyan text-[10px] font-bold px-4 py-1.5 rounded-full uppercase tracking-wider mb-6 whitespace-nowrap shadow-[0_0_15px_rgba(0,150,199,0.3)] flex-shrink-0">CTO & Co-Founder</div>
-        <p class="text-sm text-slate-400 text-center leading-relaxed">10+ years in game development and engineering with experience in commercial game products and scalable systems.</p>
-    </div>
+                <div
+                    class="relative overflow-hidden group reveal delay-200 bg-cardDark rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.6)] p-8 flex flex-col items-center border border-white/5 hover:-translate-y-2 hover:border-brandCyan/30 transition-all duration-500 h-full">
+                    <div
+                        class="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-1 bg-gradient-to-r from-brandCyan to-brandPurple rounded-b-full opacity-80 group-hover:w-full group-hover:h-1.5 transition-all duration-500">
+                    </div>
 
-    <div class="relative overflow-hidden group reveal delay-300 bg-cardDark rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.6)] p-8 flex flex-col items-center border border-white/5 hover:-translate-y-2 hover:border-brandPurple/30 transition-all duration-500 h-full">
-        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-1 bg-gradient-to-r from-brandCyan to-brandPurple rounded-b-full opacity-80 group-hover:w-full group-hover:h-1.5 transition-all duration-500"></div>
+                    <div class="relative w-40 h-40 mb-6 flex items-center justify-center flex-shrink-0">
+                        <img src="images/nedim.png" class="absolute inset-0 w-full h-full object-contain"
+                            alt="Nedim Turk">
+                    </div>
+                    <h3
+                        class="font-bold text-lg text-white mb-2 text-center pt-3 flex-grow flex items-center leading-tight pb-1">
+                        Nedim Turk</h3>
+                    <div
+                        class="bg-[#0b1633] border border-brandCyan/30 text-brandCyan text-[10px] font-bold px-4 py-1.5 rounded-full uppercase tracking-wider mb-6 whitespace-nowrap shadow-[0_0_15px_rgba(0,150,199,0.3)] flex-shrink-0">
+                        CTO & Co-Founder</div>
+                    <p class="text-sm text-slate-400 text-center leading-relaxed">10+ years in game development and
+                        engineering with experience in commercial game products and scalable systems.</p>
+                </div>
 
-        <div class="relative w-40 h-40 mb-6 flex items-center justify-center flex-shrink-0">
-            <img src="images/man2.png" class="absolute inset-0 w-full h-full object-contain" alt="Fevzi Zakiroglu">
-        </div>
-        <h3 class="font-bold text-lg text-white mb-2 text-center pt-3 flex-grow flex items-center leading-tight pb-1">Fevzi Zakiroglu</h3>
-        <div class="bg-[#0b1633] border border-brandCyan/30 text-brandCyan text-[10px] font-bold px-4 py-1.5 rounded-full uppercase tracking-wider mb-6 text-center leading-relaxed shadow-[0_0_15px_rgba(0,150,199,0.3)] flex-shrink-0">Strategic Partner<br>& Co-Founder</div>
-        <p class="text-sm text-slate-400 text-center leading-relaxed">Background in investment management, strategy, and governance.</p>
-    </div>
+                <div
+                    class="relative overflow-hidden group reveal delay-300 bg-cardDark rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.6)] p-8 flex flex-col items-center border border-white/5 hover:-translate-y-2 hover:border-brandPurple/30 transition-all duration-500 h-full">
+                    <div
+                        class="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-1 bg-gradient-to-r from-brandCyan to-brandPurple rounded-b-full opacity-80 group-hover:w-full group-hover:h-1.5 transition-all duration-500">
+                    </div>
 
-    <div class="relative overflow-hidden group reveal delay-400 bg-cardDark rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.6)] p-8 flex flex-col items-center border border-white/5 hover:-translate-y-2 hover:border-teal-500/30 transition-all duration-500 h-full">
-        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-1 bg-gradient-to-r from-brandCyan to-brandPurple rounded-b-full opacity-80 group-hover:w-full group-hover:h-1.5 transition-all duration-500"></div>
+                    <div class="relative w-40 h-40 mb-6 flex items-center justify-center flex-shrink-0">
+                        <img src="images/man2.png" class="absolute inset-0 w-full h-full object-contain"
+                            alt="Fevzi Zakiroglu">
+                    </div>
+                    <h3
+                        class="font-bold text-lg text-white mb-2 text-center pt-3 flex-grow flex items-center leading-tight pb-1">
+                        Fevzi Zakiroglu</h3>
+                    <div
+                        class="bg-[#0b1633] border border-brandCyan/30 text-brandCyan text-[10px] font-bold px-4 py-1.5 rounded-full uppercase tracking-wider mb-6 text-center leading-relaxed shadow-[0_0_15px_rgba(0,150,199,0.3)] flex-shrink-0">
+                        Strategic Partner<br>& Co-Founder</div>
+                    <p class="text-sm text-slate-400 text-center leading-relaxed">Background in investment management,
+                        strategy, and governance.</p>
+                </div>
 
-        <div class="relative w-40 h-40 mb-6 flex items-center justify-center flex-shrink-0">
-            <img src="images/man1.png" class="absolute inset-0 w-full h-full object-contain" alt="Abdulbasit Yildiz">
-        </div>
-        <h3 class="font-bold text-lg text-white mb-2 text-center pt-3 flex-grow flex items-center leading-tight pb-1">Abdulbasit Yildiz</h3>
-        <div class="bg-[#0b1633] border border-brandCyan/30 text-brandCyan text-[10px] font-bold px-4 py-1.5 rounded-full uppercase tracking-wider mb-6 text-center leading-relaxed shadow-[0_0_15px_rgba(0,150,199,0.3)] flex-shrink-0">Strategic Partner<br>& Co-Founder</div>
-        <p class="text-sm text-slate-400 text-center leading-relaxed">Entrepreneurial and investment background with long-term experience in company building and strategic growth.</p>
-    </div>
-</div>
+                <div
+                    class="relative overflow-hidden group reveal delay-400 bg-cardDark rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.6)] p-8 flex flex-col items-center border border-white/5 hover:-translate-y-2 hover:border-teal-500/30 transition-all duration-500 h-full">
+                    <div
+                        class="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-1 bg-gradient-to-r from-brandCyan to-brandPurple rounded-b-full opacity-80 group-hover:w-full group-hover:h-1.5 transition-all duration-500">
+                    </div>
+
+                    <div class="relative w-40 h-40 mb-6 flex items-center justify-center flex-shrink-0">
+                        <img src="images/man1.png" class="absolute inset-0 w-full h-full object-contain"
+                            alt="Abdulbasit Yildiz">
+                    </div>
+                    <h3
+                        class="font-bold text-lg text-white mb-2 text-center pt-3 flex-grow flex items-center leading-tight pb-1">
+                        Abdulbasit Yildiz</h3>
+                    <div
+                        class="bg-[#0b1633] border border-brandCyan/30 text-brandCyan text-[10px] font-bold px-4 py-1.5 rounded-full uppercase tracking-wider mb-6 text-center leading-relaxed shadow-[0_0_15px_rgba(0,150,199,0.3)] flex-shrink-0">
+                        Strategic Partner<br>& Co-Founder</div>
+                    <p class="text-sm text-slate-400 text-center leading-relaxed">Entrepreneurial and investment
+                        background with long-term experience in company building and strategic growth.</p>
+                </div>
+            </div>
 
             <div class="reveal delay-500 mt-16 text-center">
-                <span class="inline-block px-6 py-3 rounded-full border border-white/10 bg-white/5 text-slate-300 font-bold text-sm tracking-wide shadow-inner">
+                <span
+                    class="inline-block px-6 py-3 rounded-full border border-white/10 bg-white/5 text-slate-300 font-bold text-sm tracking-wide shadow-inner">
                     AdOnverse is new. The execution experience behind it is not.
                 </span>
             </div>
@@ -661,39 +969,56 @@
 
     <section id="investors" class="py-32 relative z-10 bg-slate-50 flex justify-center items-center px-6 leading-tight">
         <div class="reveal max-w-5xl w-full relative z-10 pt-8">
-            <div class="relative bg-white rounded-[2.5rem] p-8 md:p-12 shadow-[0_20px_50px_-10px_rgba(15,23,42,0.1)] border border-slate-200 overflow-hidden hover:shadow-[0_25px_60px_-10px_rgba(15,23,42,0.15)] transition-shadow duration-700">
+            <div
+                class="relative bg-white rounded-[2.5rem] p-8 md:p-12 shadow-[0_20px_50px_-10px_rgba(15,23,42,0.1)] border border-slate-200 overflow-hidden hover:shadow-[0_25px_60px_-10px_rgba(15,23,42,0.15)] transition-shadow duration-700">
                 <div class="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-brandCyan to-brandPurple"></div>
-                <div class="absolute -top-32 -right-32 w-64 h-64 bg-brandPurple/10 rounded-full blur-3xl pointer-events-none"></div>
-                <div class="absolute -bottom-32 -left-32 w-64 h-64 bg-brandCyan/10 rounded-full blur-3xl pointer-events-none"></div>
+                <div
+                    class="absolute -top-32 -right-32 w-64 h-64 bg-brandPurple/10 rounded-full blur-3xl pointer-events-none">
+                </div>
+                <div
+                    class="absolute -bottom-32 -left-32 w-64 h-64 bg-brandCyan/10 rounded-full blur-3xl pointer-events-none">
+                </div>
 
-                <div class="relative z-10 flex flex-col md:flex-row items-center md:items-stretch gap-10 md:gap-12 leading-tight">
+                <div
+                    class="relative z-10 flex flex-col md:flex-row items-center md:items-stretch gap-10 md:gap-12 leading-tight">
                     <div class="flex-1 text-center md:text-left flex flex-col justify-center">
-                        
+
                         <div class="flex items-center justify-center md:justify-start gap-2 mb-6">
                             <div class="w-2 h-2 rounded-full bg-[#8A2BE2] ring-4 ring-[#8A2BE2]/20"></div>
-                            <span class="text-[11px] font-bold text-slate-700 uppercase tracking-widest ml-1">Investor Relations</span>
+                            <span class="text-[11px] font-bold text-slate-700 uppercase tracking-widest ml-1">Investor
+                                Relations</span>
                         </div>
 
-                        <h2 class="text-3xl md:text-4xl lg:text-5xl font-display font-black text-slate-900 mb-5 tracking-tight leading-tight">
+                        <h2
+                            class="text-3xl md:text-4xl lg:text-5xl font-display font-black text-slate-900 mb-5 tracking-tight leading-tight">
                             Built for scale in interactive advertising
                         </h2>
                         <p class="text-lg text-slate-600 font-medium leading-relaxed mb-4 max-w-3xl">
-                            AdOnverse combines sponsor-funded campaigns, game systems, and measurable participation into one scalable operating model.
+                            AdOnverse combines sponsor-funded campaigns, game systems, and measurable participation into
+                            one scalable operating model.
                         </p>
                         <p class="text-sm text-slate-500 font-medium leading-relaxed max-w-2xl">
-                            It begins with Wake Panda, but the platform is designed to expand across multiple games, campaign formats, and sponsor opportunities while keeping one structured sponsor flow across the system.
+                            It begins with Wake Panda, but the platform is designed to expand across multiple games,
+                            campaign formats, and sponsor opportunities while keeping one structured sponsor flow across
+                            the system.
                         </p>
                     </div>
 
-                    <div class="w-full md:w-[340px] shrink-0 flex flex-col items-center justify-center p-8 bg-slate-50 rounded-3xl border border-slate-200 shadow-inner group relative overflow-hidden h-full">
+                    <div
+                        class="w-full md:w-[340px] shrink-0 flex flex-col items-center justify-center p-8 bg-slate-50 rounded-3xl border border-slate-200 shadow-inner group relative overflow-hidden h-full">
                         <div class="text-center mb-6 z-10">
-                            <span class="block text-sm font-bold text-slate-800 mb-1 leading-snug">One campaign system.</span>
-                            <span class="block text-sm font-bold text-transparent bg-clip-text bg-gradient-to-r from-brandCyan to-brandPurple leading-snug">Multiple playable experiences.</span>
+                            <span class="block text-sm font-bold text-slate-800 mb-1 leading-snug">One campaign
+                                system.</span>
+                            <span
+                                class="block text-sm font-bold text-transparent bg-clip-text bg-gradient-to-r from-brandCyan to-brandPurple leading-snug">Multiple
+                                playable experiences.</span>
                         </div>
-                        <a href="#" onclick="openModal('deckModal'); return false;" class="w-full text-center px-8 py-4 rounded-full bg-slate-900 text-white font-bold text-lg hover:bg-slate-800 hover:shadow-[0_10px_25px_rgba(15,23,42,0.3)] transition-all transform group-hover:-translate-y-1 z-10">
+                        <a href="#" onclick="openModal('deckModal'); return false;"
+                            class="w-full text-center px-8 py-4 rounded-full bg-slate-900 text-white font-bold text-lg hover:bg-slate-800 hover:shadow-[0_10px_25px_rgba(15,23,42,0.3)] transition-all transform group-hover:-translate-y-1 z-10">
                             Request pitch deck
                         </a>
-                        <div class="text-[9px] font-bold text-slate-400 uppercase tracking-wider mt-5 text-center px-2 z-10">
+                        <div
+                            class="text-[9px] font-bold text-slate-400 uppercase tracking-wider mt-5 text-center px-2 z-10">
                             Request the investor deck to learn more
                         </div>
                     </div>
@@ -701,20 +1026,28 @@
             </div>
         </div>
     </section>
-<!-- planet -->
+    <!-- planet -->
     <section class="relative pt-24 pb-32 z-20 bg-cosmic overflow-hidden shadow-2xl">
         <div class="bg-cosmic-stars"></div>
         <div class="max-w-7xl mx-auto px-6 mb-16 text-center relative z-10 leading-tight">
             <h2 class="reveal text-4xl font-display font-extrabold mb-6 text-white drop-shadow-md leading-tight">
-                Ecosystem <span class="text-transparent bg-clip-text bg-gradient-to-r from-brandCyan to-brandPurple">Infrastructure</span>
+                Ecosystem <span
+                    class="text-transparent bg-clip-text bg-gradient-to-r from-brandCyan to-brandPurple">Infrastructure</span>
             </h2>
             <p class="reveal delay-100 text-lg text-slate-300 font-medium max-w-3xl mx-auto leading-relaxed">
-                AdOnverse utilizes established platforms for <span class="text-brandCyan font-semibold drop-shadow-[0_0_5px_rgba(0,150,199,0.5)]">app distribution</span> and specialized providers for <span class="text-purple-400 font-semibold drop-shadow-[0_0_5px_rgba(192,132,252,0.5)]">reward fulfillment</span>, ensuring a <span class="text-white font-bold">compliant and standardized</span> experience for all users.
+                AdOnverse utilizes established platforms for <span
+                    class="text-brandCyan font-semibold drop-shadow-[0_0_5px_rgba(0,150,199,0.5)]">app
+                    distribution</span> and specialized providers for <span
+                    class="text-purple-400 font-semibold drop-shadow-[0_0_5px_rgba(192,132,252,0.5)]">reward
+                    fulfillment</span>, ensuring a <span class="text-white font-bold">compliant and standardized</span>
+                experience for all users.
             </p>
         </div>
-        
-        <div class="reveal delay-200 flex overflow-hidden relative w-full opacity-50 hover:opacity-100 transition duration-500 z-10 marquee-mask">
-            <div class="animate-marquee flex items-center gap-24 whitespace-nowrap text-2xl font-display font-black text-slate-400 uppercase tracking-widest w-max px-12">
+
+        <div
+            class="reveal delay-200 flex overflow-hidden relative w-full opacity-50 hover:opacity-100 transition duration-500 z-10 marquee-mask">
+            <div
+                class="animate-marquee flex items-center gap-24 whitespace-nowrap text-2xl font-display font-black text-slate-400 uppercase tracking-widest w-max px-12">
                 <span>Tremendous</span><span>Google Play</span><span>Telegram</span><span>Apple App Store</span>
                 <span>Tremendous</span><span>Google Play</span><span>Telegram</span><span>Apple App Store</span>
                 <span>Tremendous</span><span>Google Play</span><span>Telegram</span><span>Apple App Store</span>
@@ -725,24 +1058,43 @@
 
     <section id="cta" class="py-32 px-6 relative z-10 bg-slate-50 border-t border-slate-100">
         <div class="reveal max-w-5xl mx-auto w-full relative z-10">
-            <div class="relative bg-white rounded-[2.5rem] p-12 md:p-20 shadow-[0_20px_50px_-10px_rgba(15,23,42,0.1)] border border-slate-200 overflow-hidden hover:shadow-[0_25px_60px_-10px_rgba(15,23,42,0.15)] transition-shadow duration-700 text-center leading-tight">
-                
+            <div
+                class="relative bg-white rounded-[2.5rem] p-12 md:p-20 shadow-[0_20px_50px_-10px_rgba(15,23,42,0.1)] border border-slate-200 overflow-hidden hover:shadow-[0_25px_60px_-10px_rgba(15,23,42,0.15)] transition-shadow duration-700 text-center leading-tight">
+
                 <div class="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-brandCyan to-brandPurple"></div>
-                
-                <div class="absolute -top-32 -right-32 w-64 h-64 bg-brandPurple/10 rounded-full blur-3xl pointer-events-none"></div>
-                <div class="absolute -bottom-32 -left-32 w-64 h-64 bg-brandCyan/10 rounded-full blur-3xl pointer-events-none"></div>
+
+                <div
+                    class="absolute -top-32 -right-32 w-64 h-64 bg-brandPurple/10 rounded-full blur-3xl pointer-events-none">
+                </div>
+                <div
+                    class="absolute -bottom-32 -left-32 w-64 h-64 bg-brandCyan/10 rounded-full blur-3xl pointer-events-none">
+                </div>
 
                 <div class="relative z-10 leading-tight">
-                    <h2 class="text-4xl md:text-5xl font-display font-black mb-6 text-slate-900 leading-tight tracking-tight">Ready to explore a better model for brand engagement?</h2>
-                    <p class="text-lg text-slate-600 mb-10 max-w-3xl mx-auto font-medium leading-relaxed">Whether you are a sponsor looking for stronger interaction, or an investor exploring the future of interactive advertising, AdOnverse is built to turn attention into measurable participation through play.</p>
-                    
-                    <div class="flex flex-col sm:flex-row justify-center gap-4 mt-10 w-full sm:w-auto mx-auto max-w-3xl leading-tight">
-                        <a href="https://play.google.com/store/apps/details?id=com.adonverse.adonverseapp&hl=en" target="_blank" rel="noopener noreferrer" class="px-8 py-4 rounded-full bg-slate-900 text-white font-bold text-lg hover:bg-slate-800 transition-all transform hover:-translate-y-1 h-full flex items-center justify-center gap-2 shadow-[0_10px_25px_rgba(15,23,42,0.2)]">
-                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M5 4v16l15-8L5 4zm2 3.8l8.3 4.2L7 16.2V7.8z"/></svg>
+                    <h2
+                        class="text-4xl md:text-5xl font-display font-black mb-6 text-slate-900 leading-tight tracking-tight">
+                        Ready to explore a better model for brand engagement?</h2>
+                    <p class="text-lg text-slate-600 mb-10 max-w-3xl mx-auto font-medium leading-relaxed">Whether you
+                        are a sponsor looking for stronger interaction, or an investor exploring the future of
+                        interactive advertising, AdOnverse is built to turn attention into measurable participation
+                        through play.</p>
+
+                    <div
+                        class="flex flex-col sm:flex-row justify-center gap-4 mt-10 w-full sm:w-auto mx-auto max-w-3xl leading-tight">
+                        <a href="https://play.google.com/store/apps/details?id=com.adonverse.adonverseapp&hl=en"
+                            target="_blank" rel="noopener noreferrer"
+                            class="px-8 py-4 rounded-full bg-slate-900 text-white font-bold text-lg hover:bg-slate-800 transition-all transform hover:-translate-y-1 h-full flex items-center justify-center gap-2 shadow-[0_10px_25px_rgba(15,23,42,0.2)]">
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                                <path d="M5 4v16l15-8L5 4zm2 3.8l8.3 4.2L7 16.2V7.8z" />
+                            </svg>
                             Get it on Google Play
                         </a>
-                        <a href="#" onclick="openModal('campaignModal'); return false;" class="px-8 py-4 rounded-full bg-btn-gradient text-white font-bold text-lg hover:shadow-[0_10px_25px_rgba(138,43,226,0.4)] transition-all transform hover:-translate-y-1 h-full flex items-center justify-center">Launch a campaign</a>
-                        <a href="mailto:partnerships@adonverse.com" class="px-8 py-4 rounded-full border border-slate-200 bg-white text-slate-800 font-bold text-lg hover:bg-slate-50 hover:border-slate-300 transition-all transform hover:-translate-y-1 h-full flex items-center justify-center">Contact us</a>
+                        <a href="#" onclick="openModal('campaignModal'); return false;"
+                            class="px-8 py-4 rounded-full bg-btn-gradient text-white font-bold text-lg hover:shadow-[0_10px_25px_rgba(138,43,226,0.4)] transition-all transform hover:-translate-y-1 h-full flex items-center justify-center">Launch
+                            a campaign</a>
+                        <a href="mailto:partnerships@adonverse.com"
+                            class="px-8 py-4 rounded-full border border-slate-200 bg-white text-slate-800 font-bold text-lg hover:bg-slate-50 hover:border-slate-300 transition-all transform hover:-translate-y-1 h-full flex items-center justify-center">Contact
+                            us</a>
                     </div>
                 </div>
             </div>
@@ -752,9 +1104,10 @@
     <footer class="py-16 border-t border-white/5 bg-cosmic text-center relative z-10 overflow-hidden">
         <div class="bg-cosmic-stars"></div>
         <div class="max-w-5xl mx-auto px-6 relative z-10">
-            <div class="flex items-center justify-center gap-2.5 mb-8 text-white text-2xl font-display font-extrabold flex items-center justify-center">
-               <img src="images/planet.png" class="w-10 h-10"/>
-                
+            <div
+                class="flex items-center justify-center gap-2.5 mb-8 text-white text-2xl font-display font-extrabold flex items-center justify-center">
+                <img src="images/planet.png" class="w-10 h-10" />
+
                 <!-- <div class="w-8 h-8 flex items-center justify-center rounded-sm shadow-[0_2px_10px_rgba(138,43,226,0.3)] text-gradient animate-text-shine flex-shrink-0">
                     <svg viewBox="0 0 100 100" class="w-6 h-6 fill-current">
                         <ellipse cx="50" cy="50" rx="42" ry="12" fill="none" stroke="current" stroke-width="4" stroke-dasharray="135 100" transform="rotate(-25 50 50)" opacity="0.6"/>
@@ -765,36 +1118,56 @@
                 </div> -->
                 <span>AdOnverse</span>
             </div>
-            
+
             <p class="text-xs text-slate-400 max-w-3xl mx-auto leading-relaxed font-bold mb-10 overflow-hidden">
                 Skill-based rewards provided by sponsors.<br>
                 Points may be redeemable for digital vouchers through approved partners.<br>
-                AdOnverse is an interactive advertising platform and does not operate as a gambling or financial application.
+                AdOnverse is an interactive advertising platform and does not operate as a gambling or financial
+                application.
             </p>
-            
-            <div class="flex justify-center gap-8 text-sm font-bold text-slate-300 mb-8 flex items-center justify-center flex-wrap">
+
+            <div
+                class="flex justify-center gap-8 text-sm font-bold text-slate-300 mb-8 flex items-center justify-center flex-wrap">
                 <a href="/Privacy Policy.html" class="hover:text-brandCyan transition-colors">Privacy policy</a>
                 <a href="/Terms of Use.html" class="hover:text-brandCyan transition-colors">Terms of service</a>
                 <a href="/Cookie Policy.html" class="hover:text-brandCyan transition-colors">Cookie policy</a>
             </div>
 
-            <div class="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-8 text-sm font-bold text-slate-500 mb-8 flex items-center justify-center flex-wrap leading-relaxed">
-                <a href="mailto:partnerships@adonverse.com" class="flex items-center gap-2 hover:text-white transition-colors h-full flex items-center justify-center leading-relaxed">
-                    <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+            <div
+                class="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-8 text-sm font-bold text-slate-500 mb-8 flex items-center justify-center flex-wrap leading-relaxed">
+                <a href="mailto:partnerships@adonverse.com"
+                    class="flex items-center gap-2 hover:text-white transition-colors h-full flex items-center justify-center leading-relaxed">
+                    <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                        </path>
+                    </svg>
                     partnerships@adonverse.com
                 </a>
-                <a href="mailto:wael@adonverse.com" class="flex items-center gap-2 hover:text-white transition-colors h-full flex items-center justify-center leading-relaxed">
-                    <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                <a href="mailto:wael@adonverse.com"
+                    class="flex items-center gap-2 hover:text-white transition-colors h-full flex items-center justify-center leading-relaxed">
+                    <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                        </path>
+                    </svg>
                     wael@adonverse.com
                 </a>
                 <span class="flex items-center gap-2 leading-relaxed">
-                    <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.242-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                    <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.242-4.243a8 8 0 1111.314 0z">
+                        </path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    </svg>
                     Istanbul, Turkiye
                 </span>
             </div>
-            
+
             <div class="h-px w-full max-w-md mx-auto bg-white/10 mb-8 flex-shrink-0"></div>
-            <p class="text-xs font-semibold text-slate-600 tracking-wider uppercase overflow-hidden">&copy; 2026 AdOnverse Technologies.</p>
+            <p class="text-xs font-semibold text-slate-600 tracking-wider uppercase overflow-hidden">&copy; 2026
+                AdOnverse Technologies.</p>
         </div>
     </footer>
 
@@ -803,13 +1176,13 @@
         function openModal(id) {
             const modal = document.getElementById(id);
             const content = modal.querySelector('.modal-content');
-            
+
             modal.classList.remove('hidden');
             modal.classList.add('flex'); // Center the modal
-            
+
             // Trigger reflow
             void modal.offsetWidth;
-            
+
             modal.classList.remove('opacity-0');
             content.classList.remove('scale-95');
             document.body.classList.add('overflow-hidden');
@@ -818,10 +1191,10 @@
         function closeModal(id) {
             const modal = document.getElementById(id);
             const content = modal.querySelector('.modal-content');
-            
+
             modal.classList.add('opacity-0');
             content.classList.add('scale-95');
-            
+
             setTimeout(() => {
                 modal.classList.remove('flex');
                 modal.classList.add('hidden');
@@ -834,10 +1207,10 @@
             e.preventDefault();
             const company = document.getElementById('deckCompany').value;
             const email = document.getElementById('deckEmail').value;
-            
+
             const subject = encodeURIComponent("Pitch Deck Request - " + company);
             const body = encodeURIComponent("Hello AdOnverse team,\n\nI would like to request the investor pitch deck.\n\nCompany: " + company + "\nEmail: " + email + "\n\nThank you.");
-            
+
             window.location.href = "mailto:wael@adonverse.com?subject=" + subject + "&body=" + body;
             closeModal('deckModal');
         }
@@ -846,17 +1219,17 @@
             e.preventDefault();
             const company = document.getElementById('campaignCompany').value;
             const email = document.getElementById('campaignEmail').value;
-            
+
             const subject = encodeURIComponent("Campaign Launch Inquiry - " + company);
             const body = encodeURIComponent("Hello AdOnverse team,\n\nWe are interested in launching a campaign on your platform.\n\nCompany: " + company + "\nEmail: " + email + "\n\nPlease get in touch with us.\n\nThank you.");
-            
+
             window.location.href = "mailto:wael@adonverse.com?subject=" + subject + "&body=" + body;
             closeModal('campaignModal');
         }
 
         // Close modal when clicking outside
         document.querySelectorAll('[id$="Modal"]').forEach(modal => {
-            modal.addEventListener('click', function(e) {
+            modal.addEventListener('click', function (e) {
                 if (e.target === this) {
                     closeModal(this.id);
                 }
@@ -864,17 +1237,17 @@
         });
 
         // Preloader Logic
-        window.addEventListener('load', function() {
-            setTimeout(function() {
+        window.addEventListener('load', function () {
+            setTimeout(function () {
                 const preloader = document.getElementById('preloader');
                 const body = document.getElementById('body');
-                
+
                 preloader.style.opacity = '0';
                 preloader.style.transform = 'translateY(-100%)';
                 preloader.style.transition = 'all 0.8s cubic-bezier(0.65, 0, 0.35, 1)';
-                
+
                 body.classList.remove('overflow-hidden');
-                
+
                 setTimeout(() => {
                     preloader.style.display = 'none';
                 }, 800);
@@ -882,7 +1255,7 @@
         });
 
         // Scroll Reveal Logic
-        document.addEventListener("DOMContentLoaded", function() {
+        document.addEventListener("DOMContentLoaded", function () {
             const observerOptions = {
                 root: null,
                 rootMargin: '0px',
@@ -903,4 +1276,5 @@
         });
     </script>
 </body>
+
 </html>
